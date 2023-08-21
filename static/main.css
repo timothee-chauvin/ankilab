@@ -1,0 +1,254 @@
+html{
+    font-family: Tinos, "Helvetica Neue", Helvetica, serif;
+    font-size: 20px;
+}
+
+body{
+    margin: 0;
+}
+
+div#body{
+    margin: 8px;
+}
+
+header{
+    background-color: #efefef;
+    border-style: none none solid none;
+    border-width: 1px;
+    border-color: #aaa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div#header-title{
+    padding: 8px;
+    font-size: 20px;
+    flex-grow: 1;
+}
+
+div#header-user{
+    flex-grow: 1;
+    padding: 4px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+div.navlink{
+    margin: 8px;
+}
+
+.small{
+    font-size: 14px;
+}
+
+div.blog-post-container{
+    margin: auto;
+    width: 650px;
+    max-width: 97%;
+}
+
+p.main-page-intro{
+    width: 500px;
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: #635bff;
+}
+
+a:hover{
+    opacity: 0.6;
+}
+
+a.nolinkstyle{
+    color: black;
+}
+
+a.nolinkstyle:hover{
+    color: #505050;
+}
+
+a.btn,
+button{
+    padding: 4px;
+    margin-left: 4px;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    font-size: 14px;
+}
+
+a.btn.rectangle,
+button.rectangle{
+    border-radius: 0;
+}
+
+a.btn.light,
+button.light{
+    background-color: white;
+    color: black;
+}
+
+a.btn:hover,
+button:hover{
+    background-color: #aaa;
+}
+
+a.btn.light:hover,
+button.light:hover{
+    background-color: white;
+    color: #505050;
+}
+
+div#tags-selected{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aaa;
+    display: flex;
+    padding: 0 0 0 4px;
+}
+
+div#tag-filter-list{
+    display: none;
+}
+
+div.anki-note{
+    background-color: #efefef;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aaa;
+    margin: 10px 0px;
+    padding: 10px 10px 0 10px;
+}
+
+
+
+div.anki-note div.anki-field div.anki-field-name{
+    font-size: 14px;
+}
+
+div.anki-note div.anki-field div.anki-field-field{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aaa;
+    background-color: white;
+    padding: 5px;
+}
+
+div.anki-note div.anki-field div.anki-field-field img{
+    max-width: 100%;
+}
+
+div.anki-note div.tag-list{
+    min-height: 10px;
+    font-size: 14px;
+}
+
+div.anki-note div.anki-note-footer{
+    font-size: 14px;
+}
+
+div.anki-note div.anki-note-footer img.arrow.downvote{
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+div.anki-note div#anki-note-editing-footer{
+    display: flex;
+}
+
+div.anki-note div#anki-note-editing-footer div.editing-tag-list{
+    flex-grow: 1;
+}
+
+div.paging-info{
+    display: flex;
+}
+
+div.paging-info div.paging-info-text{
+    flex-grow: 1;
+}
+
+div.paging-info a.paging-nav{
+    margin-left: 5px;
+}
+
+img.arrow{
+    height: 14px;
+}
+
+img.arrow-right{
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+div.vote-value{
+    display: inline;
+}
+
+.tag,
+.deck-in-note{
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 12px;
+    padding: 4.8px 6px 4.8px 6px;
+    display: inline-block;
+    margin: 4px 4px 4px 0;
+    vertical-align: middle;
+}
+
+.tag img,
+.deck-in-note img{
+    height: 8px;
+}
+
+.tag{
+    border-color: #aaa;
+}
+
+#tag-filter-btn{
+    border: none;
+}
+
+.deck-in-note{
+    border-color: #444;
+}
+
+.toggle-add-deck-list-btn{
+    border: none;
+}
+
+.deck-add-list{
+    display: none;
+}
+
+.tag:hover,
+.deck-in-note:hover{
+    color: #505050;
+    cursor: pointer;
+}
+
+.inline{
+    display: inline;
+}
+
+.paging-info{
+    font-size: 14px;
+}
+
+#make-deck-details{
+    display: none;
+}
+
+.btn.danger{
+    background-color: #f00;
+}

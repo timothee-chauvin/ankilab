@@ -1,0 +1,186 @@
+(:let ((grey0 "#444")
+       (grey1 "#505050")
+       (grey2 "#aaa")
+       (grey3 "#efefef")
+       (red "#f00")
+       (linkcolor "#635bff")
+       (small 14px))
+  (html
+   :font-family "Tinos, \"Helvetica Neue\", Helvetica, serif"
+   :font-size 20px)
+
+  (body
+   :margin 0)
+
+  ("div#body"
+   :margin 8px)
+
+  (header
+   :background-color #(grey3)
+   :border-style "none none solid none"
+   :border-width 1px
+   :border-color #(grey2)
+   :display flex
+   :justify-content space-between
+   :align-items center
+   ("div#header-title"
+    :padding 8px
+    :font-size 20px
+    :flex-grow 1))
+
+  ("div#header-user"
+   :flex-grow 1
+   :padding 4px
+   :display flex
+   :justify-content flex-end)
+
+  (div.navlink
+   :margin 8px)
+
+  (.small
+   :font-size #(small))
+
+  (div.blog-post-container
+   :margin auto ; center-align
+   :width 650px
+   :max-width 97%)
+
+  (p.main-page-intro
+   :width 500px
+   :max-width 100%)
+
+  (a
+   :text-decoration none
+   :color #(linkcolor))
+
+  ((:and a :hover)
+   :opacity 0.6)
+
+  (a.nolinkstyle
+   :color black)
+
+  ((:and a.nolinkstyle :hover)
+   :color #(grey1))
+
+  ((:or a.btn button)
+   :padding 4px
+   :margin-left 4px
+   ;; Buttons are round by default
+   :border-radius 5px
+   ;; Buttons are dark by default
+   :background-color #(grey0)
+   :color white
+   :font-size #(small))
+
+  ((:or a.btn.rectangle button.rectangle)
+   :border-radius 0)
+
+  ((:or a.btn.light button.light)
+   :background-color white
+   :color black)
+
+  ((:and (:or a.btn button) :hover)
+   :background-color #(grey2))
+
+  ((:and (:or a.btn.light button.light) :hover)
+   :background-color white
+   :color #(grey1))
+
+  ("div#tags-selected"
+   :border-style "solid"
+   :border-width 1px
+   :border-color #(grey2)
+   :display flex
+   :padding 0 0 0 4px)
+
+  ;; Hide the tag filter list by default
+  ("div#tag-filter-list"
+   :display none)
+
+  (div.anki-note
+   :background-color #(grey3)
+   :border-style "solid"
+   :border-width 1px
+   :border-color #(grey2)
+   :margin 10px 0px
+   :padding 10px 10px 0 10px
+   (div.anki-field
+    (div.anki-field-name
+     :font-size #(small))
+    (div.anki-field-field
+     :border-style "solid"
+     :border-width 1px
+     :border-color #(grey2)
+     :background-color white
+     :padding 5px
+     (img
+      :max-width 100%)))
+   (div.tag-list
+    :min-height 10px        ; in case there are no tags, don't completely shrink
+    :font-size #(small)
+    )
+   (div.anki-note-footer
+    :font-size #(small)
+    (img.arrow.downvote
+     :transform "rotate(180deg)"))
+   ("div#anki-note-editing-footer"
+    :display flex
+    (div.editing-tag-list
+     :flex-grow 1)))
+
+  (div.paging-info
+   :display flex
+   (div.paging-info-text
+    :flex-grow 1)
+   (a.paging-nav
+    :margin-left 5px))
+
+  (img.arrow
+   :height #(small))
+  (img.arrow-right
+   :transform "rotate(180deg)")
+
+  (div.vote-value
+   :display inline)
+
+  ((:or .tag .deck-in-note)
+   :background-color white
+   :border-style "solid"
+   :border-width 1px
+   :font-size 12px
+   :padding 4.8px 6px 4.8px 6px
+   :display inline-block
+   :margin 4px 4px 4px 0
+   :vertical-align middle
+   (img
+    :height 8px))
+
+  (.tag
+   :border-color #(grey2))
+  ("#tag-filter-btn"
+   :border none)
+  (.deck-in-note
+   :border-color #(grey0))
+  (.toggle-add-deck-list-btn
+   :border none)
+  (.deck-add-list
+   ;; hidden by default
+   :display none)
+
+  ((:and (:or .tag .deck-in-note) :hover)
+   :color #(grey1)
+   :cursor pointer)
+
+  (.inline
+   :display inline)
+
+  (.paging-info
+   :font-size #(small))
+
+  ("#make-deck-details"
+   :display none             ; unless make-deck checkbox checked, see JavaScript
+   )
+
+  ((:and .btn .danger)
+   :background-color #(red))
+)
